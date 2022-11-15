@@ -3,7 +3,7 @@ import {Message} from "./Message";
 import io from 'socket.io-client';
 import './App.css';
 
-const socket = io('http://lulu24.kro.kr:3000');
+const socket = io('http://127.0.0.1:3000');
 
 function App(): JSX.Element {
     const [name, setName] = useState('');
