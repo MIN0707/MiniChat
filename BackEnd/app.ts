@@ -35,7 +35,7 @@ io.on('connection', (socket) => {
                 await chat.save();
                 const messages = await Chat.find({});
                 socket.emit('messages', messages);
-                socket.broadcast.emit('join', {
+                socket.broadcast.emit('message', {
                     text: name + ' has joined the chat',
                     sender: "Server",
                     timestamp: new Date().toTimeString()
